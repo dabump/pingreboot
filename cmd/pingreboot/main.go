@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"runtime"
 
 	"github.com/dabump/pingreboot/internal/ping"
 	"github.com/dabump/pingreboot/internal/util"
@@ -16,6 +17,10 @@ const (
 
 func main() {
 	log.Printf("running pingreboot %v\n", version)
+
+	if runtime.GOOS == "windows" {
+		log.Fatal("windows system not supported. go away...")
+	}
 
 	isRoot, err := util.IsRoot()
 	if err != nil {
