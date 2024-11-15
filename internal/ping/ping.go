@@ -45,7 +45,7 @@ func NewClient() (*client, error) {
 func (c *client) Ping() error {
 	pingClient, err := probing.NewPinger(*c.Target)
 	if err != nil {
-		return fmt.Errorf("error during initialise: %v", err)
+		return fmt.Errorf("error during initialise: %w", err)
 	}
 
 	pingClient.Interval = time.Second * time.Duration(pingIntervalInSeconds)
