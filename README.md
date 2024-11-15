@@ -23,10 +23,10 @@ In order to build this library, you will need to have GIT and GO installed. In a
 # Specify the target
 pingreboot --target 1.1.1.1 
 
-# Add interval in minutes between pings to target
+# Add interval in minutes between pings to target (default: 1 minute)
 pingreboot --target 1.1.1.1 --interval 2
 
-# Specify the failure retry count before restart
+# Specify the failure retry count before restart (default: 3 retries)
 pingreboot --target 1.1.1.1 --retry-count 5
 ```
 
