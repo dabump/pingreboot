@@ -1,7 +1,7 @@
 # Ping Reboot
 
-https://github.com/dabump/pingreboot/actions/workflows/golangci-lint/badge.svg
-https://github.com/dabump/pingreboot/actions/workflows/pr-checks/badge.svg
+![build workflow](https://github.com/dabump/pingreboot/actions/workflows/golangci-lint/badge.svg)
+![build workflow](https://github.com/dabump/pingreboot/actions/workflows/pr-checks/badge.svg)
 
 ## Background
 My Linux server in the garage on occasion loses network connectivity to the router. 
