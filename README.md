@@ -3,6 +3,9 @@
 ![build workflow](https://github.com/dabump/pingreboot/actions/workflows/golangci-lint.yml/badge.svg)
 ![build workflow](https://github.com/dabump/pingreboot/actions/workflows/pr-checks.yml/badge.svg)
 
+## TLDR;
+CLI tool that will ping a target until connectiviy issue, and will restart the local machine
+
 ## Background
 My Linux server in the garage on occasion loses network connectivity to the router. 
 
