@@ -26,5 +26,4 @@ pingreboot --target 1.1.1.1 --interval 2
 # Specify the failure retry count before restart
 pingreboot --target 1.1.1.1 --retry-count 5
 `
-```
-```
+
