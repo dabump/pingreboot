@@ -101,7 +101,7 @@ func reboot() {
 		}
 
 	case "darwin":
-		cmd := exec.Command("shutdown", "-r")
+		cmd := exec.Command("shutdown", "-r", "now")
 		err := cmd.Run()
 		if err != nil {
 			log.Fatalf("error during rebooting of system: %v", err)
