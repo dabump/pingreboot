@@ -91,17 +91,18 @@ func (c *client) PingUntilCancel(ctx context.Context) {
 
 func reboot() {
 	log.Println("rebooting system...")
+	ctx := context.Background()
 	switch os := runtime.GOOS; os {
 
 	case "linux":
-		cmd := exec.Command("systemctl", "reboot")
+		cmd := exec.CommandContext(ctx, "systemctl", "reboot")
 		err := cmd.Run()
 		if err != nil {
 			log.Fatalf("error during rebooting of system: %v", err)
 		}
 
 	case "darwin":
-		cmd := exec.Command("shutdown", "-r", "now")
+		cmd := exec.CommandContext(ctx, "shutdown", "-r", "now")
 		err := cmd.Run()
 		if err != nil {
 			log.Fatalf("error during rebooting of system: %v", err)
